@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahadi Hasan</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+body{
+background:linear-gradient(270deg,#020024,#090979,#000428,#004e92);
+background-size:800% 800%;
+animation:bg 12s infinite;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+width:90%;
+max-width:420px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:30px;
+box-shadow:0 0 40px cyan;
+text-align:center;
+}
+
+.page{
+display:none;
+animation:fade .6s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+margin-bottom:15px;
+text-shadow:0 0 20px cyan;
+}
+
+.btn{
+
+margin:15px 0;
+padding:14px;
+
+border-radius:40px;
+
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.2);
+
+cursor:pointer;
+
+font-size:18px;
+
+box-shadow:0 0 15px cyan;
+
+transition:.4s;
+
+transform-style:preserve-3d;
+
+}
+
+.btn:hover{
+
+transform:rotateY(10deg) scale(1.1);
+
+box-shadow:0 0 30px cyan;
+
+}
+
+.holoCard{
+
+width:220px;
+margin:20px auto;
+padding:20px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 0 20px cyan,
+0 0 40px rgba(0,255,255,.4);
+
+animation:holo 3s infinite alternate;
+
+}
+
+@keyframes holo{
+
+0%{box-shadow:0 0 20px cyan;}
+100%{box-shadow:0 0 40px #00f2ff;}
+
+}
+
+.holoCard img{
+
+width:140px;
+height:140px;
+
+border-radius:50%;
+
+border:3px solid cyan;
+
+box-shadow:0 0 25px cyan;
+
+margin-bottom:15px;
+
+}
+
+.point{
+
+margin:10px 0;
+padding:10px;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.08);
+
+box-shadow:0 0 10px cyan;
+
+}
+
+.social{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin:12px;
+padding:12px;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.08);
+
+text-decoration:none;
+color:white;
+
+box-shadow:0 0 15px cyan;
+
+transition:.3s;
+
+}
+
+.social:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 35px cyan;
+
+}
+
+.social img{
+width:30px;
+margin-right:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HOME -->
+
+<div id="home" class="page" style="display:block">
+
+<h1>✨ আস্সালামু আলাইকুম ✨</h1>
+
+<p>আপনার সাহায্য এর জন্য আমি মাহাদী সব সময় প্রস্তুত</p>
+
+<div class="btn" onclick="showPage('intro')">My Intro</div>
+
+<div class="btn" onclick="showPage('social')">My Social Media</div>
+
+</div>
+
+<!-- INTRO PAGE -->
+
+<div id="intro" class="page">
+
+<h1>🌟 My Information</h1>
+
+<div class="holoCard">
+
+<img src="https://drive.google.com/uc?export=view&id=12h8sfL-no5l1IJBKWUr0so2eykagepuT">
+
+<div class="point">Name : Mahadi Hasan</div>
+
+<div class="point">Graphics Designer</div>
+
+<div class="point">Editor</div>
+
+<div class="point">Striker</div>
+
+</div>
+
+<div class="btn" onclick="showPage('home')">Back</div>
+
+</div>
+
+<!-- SOCIAL PAGE -->
+
+<div id="social" class="page">
+
+<h1>🌐 My Social Media</h1>
+
+<a class="social" href="https://www.facebook.com/modharrof">
+
+<img src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
+
+Facebook
+
+</a>
+
+<a class="social" href="https://www.facebook.com/profile.php?id=61588503683830">
+
+<img src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
+
+Facebook 2
+
+</a>
+
+<a class="social" href="https://t.me/Marco_bbz">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+
+Telegram
+
+</a>
+
+<a class="social" href="https://www.instagram.com/mahadi_hasan_0199">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+
+Instagram
+
+</a>
+
+<div class="btn" onclick="showPage('home')">Back</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showPage(id){
+
+document.getElementById("home").style.display="none";
+document.getElementById("intro").style.display="none";
+document.getElementById("social").style.display="none";
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
